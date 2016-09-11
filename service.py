@@ -6,10 +6,11 @@ import sys
 import os
 import threading
 
-from six.moves import BaseHTTPServer
-
 import xbmc
 import xbmcaddon
+
+sys.path.append(os.path.join(os.path.dirname(__file__), 'six'))
+from six.moves import BaseHTTPServer  # noqa
 
 sys.path.append(os.path.join(os.path.dirname(__file__), 'httpd-echo'))
 import httpdecho  # noqa
